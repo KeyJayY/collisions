@@ -1,8 +1,4 @@
-/**
-* @type HTMLCanvasElement
-*/
-
-const canvas = document.getElementById("canvas");
+const canvas = document.getElementById("canvas"); // initial vars
 const ctx = canvas.getContext("2d");
 
 var t = Date.now();
@@ -24,7 +20,7 @@ function turnoff()
 }
 
 
-function draw()
+function draw() // drawing each frame
 {
     var timepassed = (Date.now() - t)/1000;
     t = Date.now();
@@ -69,7 +65,7 @@ function draw()
 
 
 
-function drawbox(x, col, s)
+function drawbox(x, col, s) // draw box function
 {   
     ctx.fillStyle = col;
     if(x>50 && x<1250)
@@ -83,7 +79,7 @@ function drawbox(x, col, s)
     }
 }
 
-function init()
+function init() // setting initial values on click start button
 {
     colisions = 0;
     ctx.clearRect(0, 0, 1300, 500);
@@ -103,7 +99,7 @@ function init()
     draw();
 }
 
-function start()
+function start() // starting a board on site load
 {   
     ctx.strokeStyle = "white";
     ctx.moveTo(50, 50);
