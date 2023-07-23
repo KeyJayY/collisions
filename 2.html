@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang=pl>
+  <head>
+    <meta charset="utf-8">
+    <title>zderzenia</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="container">
+        <header>
+            <h1>Zderzenia</h1>
+        </header>
+        <div class="panel">
+            <fieldset>
+                <legend>panel sterowania</legend>
+                    <label>
+                        masa 1<br>
+                        <input type="range" min="1" max="100" id="m1" oninput="document.getElementById('m1l').innerHTML = this.value">
+                        <div id="m1l">50</div>
+                    </label>
+                    <label>
+                        masa 2<br>
+                        <input type="range" min="1" max="100" id="m2" oninput="document.getElementById('m2l').innerHTML = this.value">
+                        <div id="m2l">50</div>
+                    </label>
+                    <label>
+                        predkosc 1<br>
+                        <input type="range" min="-50" max="50" id="v1" oninput="document.getElementById('v1l').innerHTML = this.value">
+                        <div id="v1l">0</div>
+                    </label>
+                    <label>
+                        predkosc 2<br>
+                        <input type="range" min="-50" max="50" id="v2" oninput="document.getElementById('v2l').innerHTML = this.value">
+                        <div id="v2l">0</div>
+                    </label>
+                    <label>
+                        <input type="button" value="Start" id="btn">
+                    </label>
+                    <input type="button" value="stop" id="btn2">
+
+                    
+                    
+            </fieldset>
+        </div>
+        <div class="board">
+            <canvas id="canvas" width="1300" height="500"></canvas>
+        </div>
+    </div>
+	<script src="skrypt.js"></script>
+
+
+  </body>
+</html>
